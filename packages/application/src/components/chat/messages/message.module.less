@@ -1,0 +1,43 @@
+.message-wrapper {
+  width: 100%;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.message {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  background-color: #f0f0f0; /* Default background */
+  color: #000;
+
+  /* Specific style based on message type.  Overrides the default */
+  &.user {
+    background-color: #dcf8c6; /* User message background */
+  }
+}
+
+.message-wrapper {
+  width: 100%;
+  display: flex;
+  margin-bottom: 8px;
+  // Other common styles for message wrappers
+}
+
+.user-wrapper {
+  justify-content: flex-end; // Align user messages to the right
+}
+
+.message-list {
+  max-height: 400px; /* Adjust as needed */
+  overflow-y: auto;
+}

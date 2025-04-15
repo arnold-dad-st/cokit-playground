@@ -1,0 +1,21 @@
+# Mac-related stuff
+._.DS_Store/
+.DS_Store/
+*.DS_Store
+
+# Node.js
+node_modules/
+
+# yalc store
+.yalc/
+yalc.lock
+
+#SonarQube
+.scannerwork/
+
+*.css.d.ts
+*.less.d.ts
+*.scss.d.ts
+/coverage/
+dist/
+*.tsbuildinfo

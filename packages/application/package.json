@@ -1,0 +1,40 @@
+{
+    "name": "application",
+    "version": "0.0.0",
+    "description": "",
+    "private": true,
+    "main": "./dist/index.js",
+    "typings": "./dist/index.d.ts",
+    "scripts": {},
+    "dependencies": {
+        "@servicetitan/anvil2": "^1.16.6",
+        "@servicetitan/hash-browser-router": "^30.0.0",
+        "@servicetitan/launchdarkly-service": "^30.0.0",
+        "@servicetitan/log-service": "^30.0.0",
+        "@servicetitan/react-ioc": "^30.0.0",
+        "@servicetitan/web-components": "^30.0.0",
+        "@servicetitan/design-system": "^14.5.1",
+        "formstate": "^2.0.0",
+        "axios": "^1.8.2",
+        "history": "~4.10.1",
+        "mobx": "~6.13.5",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^5.3.0"
+    },
+    "devDependencies": {
+        "@servicetitan/testing-library": "^3.0.0",
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.0.1",
+        "@testing-library/react-hooks": "^8.0.1",
+        "@types/react": "^18.3.11",
+        "@types/react-dom": "^18.3.1",
+        "@types/react-router-dom": "^5.3.2"
+    },
+    "cli": {
+        "webpack": {
+            "expose-shared-dependencies": true
+        }
+    }
+}

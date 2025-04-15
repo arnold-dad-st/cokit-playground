@@ -1,0 +1,42 @@
+{
+    "name": "frontend-example",
+    "private": true,
+    "engines": {
+        "node": ">=20",
+        "npm": ">=10"
+    },
+    "scripts": {
+        "bootstrap": "npx --yes @servicetitan/startup install",
+        "prestart": "npm run bootstrap",
+        "start": "startup start | node ./server.js",
+        "prebuild": "npm run bootstrap",
+        "build": "startup build",
+        "lint": "startup lint",
+        "test": "startup test"
+    },
+    "devDependencies": {
+        "@servicetitan/startup": ">=30.0.0",
+        "@servicetitan/testing-library": "^3.0.0",
+        "@servicetitan/tokens": "^12.9.0"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "cli": {
+        "test": {
+            "setupFilesAfterEnv": [
+                "<rootDir>/setupTests.ts"
+            ]
+        }
+    },
+    "dependencies": {
+        "@copilotkit/react-core": "^1.8.5",
+        "@copilotkit/react-ui": "^1.8.5",
+        "@copilotkit/runtime": "^1.8.5",
+        "@servicetitan/design-system": "^14.5.1",
+        "dotenv": "^16.5.0",
+        "framer-motion": "^12.7.3",
+        "launchdarkly-react-client-sdk": "^3.6.1",
+        "mobx-react": "^9.2.0"
+    }
+}
