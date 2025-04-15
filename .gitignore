@@ -19,3 +19,5 @@ yalc.lock
 /coverage/
 dist/
 *.tsbuildinfo
+.idea/
+.env
