@@ -4,9 +4,10 @@ import { StrictMode, FC } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import { MainPage } from './main-page';
-import { MFEPage } from './mfe-page';
 import './app.css';
 import { CopilotKit } from '@copilotkit/react-core';
+import { CopilotPopup } from '@copilotkit/react-ui';
+import '@copilotkit/react-ui/styles.css';
 
 export const App: FC = () => (
     <HashBrowserRouter>
@@ -30,10 +31,10 @@ const AppSidebar: FC = () => (
         </Page.SidebarHeader>
         <SideNav>
             <SideNav.Link id="main" href="#/">
-                Main page
+                Anvil
             </SideNav.Link>
             <SideNav.Link id="mfe" href="#/mfe">
-                MFE page
+                CopilotKit
             </SideNav.Link>
         </SideNav>
     </Page.Sidebar>
@@ -47,7 +48,13 @@ const AppContent: FC = () => (
                     <MainPage />
                 </Route>
                 <Route path="/mfe">
-                    <MFEPage />
+                    <CopilotPopup
+                        instructions="You are assisting the user as best as you can. Answer in the best way possible given the data you have."
+                        labels={{
+                            title: 'Popup Assistant',
+                            initial: 'Need any help?',
+                        }}
+                    />
                 </Route>
             </Switch>
         </Page.Content>

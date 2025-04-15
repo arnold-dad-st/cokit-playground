@@ -8,7 +8,8 @@
     "scripts": {
         "bootstrap": "npx --yes @servicetitan/startup install",
         "prestart": "npm run bootstrap",
-        "start": "startup start | node ./server.js",
+        "start": "startup start",
+        "server": "node ./server.js",
         "prebuild": "npm run bootstrap",
         "build": "startup build",
         "lint": "startup lint",
